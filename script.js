@@ -167,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-
     /* Update: hero photo dissolves when clicked or when keyboard Enter/Space is pressed */
     const heroPhoto = document.querySelector(".photo-dissolve");
     const heroPhotoArea = document.querySelector(".hero-photo-area");
