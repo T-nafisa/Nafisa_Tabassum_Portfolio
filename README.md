@@ -8,8 +8,8 @@ The website is built from scratch using HTML, CSS, JavaScript, and Bootstrap. It
 
 ## GitHub Repository and Live Website
 
-- GitHub Repository: https://github.com/T-nafisa/Nafisa_Tabassum_Portfolio.git
-- Live Website: [Add GitHub Pages website link here]
+- GitHub Repository: https://github.com/T-nafisa/Nafisa_Tabassum_Portfolio
+- Live Website: https://t-nafisa.github.io/Nafisa_Tabassum_Portfolio/
 
 ---
 
