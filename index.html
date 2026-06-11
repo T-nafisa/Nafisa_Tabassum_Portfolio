@@ -1,0 +1,818 @@
+<!--
+Author: Nafisa Tabassum
+Date of Initial Design: June 8, 2026
+Last Updated: June 11, 2026
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nafisa Tabassum - Portfolio</title>
+
+    <!-- ADDED: website favicon  -->
+    <link rel="icon" type="image/png" href="assets/favicon/logo.png">
+    <link rel="apple-touch-icon" href="assets/favicon/logo.png">
+    <link rel="shortcut icon" href="assets/favicon/logo.png" type="image/png">
+    <!-- Linking Bootstrap CSS to borrow some of their designs-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Linking Font Awesome for icons using -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Linking my custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+<!-- Adding playful elements for background decorations -->
+<div class="playful-bg" aria-hidden="true">
+    <span class="bg-star star-one">✦</span>
+    <span class="bg-star star-two">✧</span>
+    <span class="bg-star star-three">✦</span>
+    <span class="bg-code code-one">&lt;/&gt;</span>
+    <span class="bg-code code-two">./</span>
+    <span class="bg-code code-three">{ }</span>
+    <span class="bg-planet planet-one"></span>
+    <span class="bg-planet planet-two"></span>
+    <span class="pacman"></span>
+    <span class="pellets"></span>
+    <span class="pixel-ghost">▟▙</span>
+    <span class="shooting-star"></span>
+</div>
+
+<header>
+    <!-- Adding a navbar implementing a bootstrap -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Nafisa Tabassum</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beyond">Beyond Tech</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-controls">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Theme toggle controlled by Javascript. Updated by making sleepy/wake-up character  -->
+                <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Switch Theme">
+                    <span class="toggle-sky" aria-hidden="true"></span>
+                    <span class="toggle-moon" aria-hidden="true"></span>
+                    <span class="toggle-sun" aria-hidden="true"></span>
+                    <span class="toggle-character" aria-hidden="true">
+                        <span class="toggle-face"></span>
+                    </span>
+                    <span class="toggle-z" aria-hidden="true">zZ</span>
+                    <span class="visually-hidden">Switch theme</span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+<main>
+    <!-- main content part of the body -->
+    <section id="home" class="hero-section section-space">
+        <div class="container">
+            <div class="hero-layout">
+                <!--  main hero text area  -->
+                <div class="hero-text">
+                    <p class="hero-kicker">Hi, This is</p>
+                    <h1 class="display-4 fw-bold">Nafisa Tabassum</h1>
+                    <h2 class="subtitle">Computer Science Student | Aspiring Software Engineer</h2>
+
+                    <!-- Updated: Added small terminal line under the subtitle -->
+                    <div class="mini-terminal" aria-label="decorative coding line">
+                        <span class="terminal-dot"></span>
+                        <span>Want to learn about me?</span>
+                        <span class="terminal-cursor"></span>
+                    </div>
+
+                    <!-- Updated: Added new thematic button styling through CSS -->
+                    <div class="d-flex flex-wrap gap-3 mt-4 hero-actions">
+                        <a href="#projects" class="btn btn-lg btn-primary">
+                            <i class="fa-solid fa-gamepad" style="color: #138585;" aria-hidden="true"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-lg btn-primary">
+                            <i class="fa-solid fa-paper-plane" style="color: #4087e4;" aria-hidden="true"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4 social-links">
+                        <a href="mailto:nafisaadt@gmail.com" aria-label="Email"> <i
+                                class="fa-solid fa-envelope" aria-hidden="true" ></i></a>
+                        <a href="https://github.com/T-nafisa" target="_blank" rel="noopener noreferrer" aria-label="Github"> <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ntabassum02" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"> <i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Main page hero photo. Update: added dissolving blurry photo component -->
+                <div class="hero-photo-area">
+                    <div class="photo-orbit" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="photo-dissolve">
+                        <img src="assets/images/hero_section.jpeg" class="img-fluid hero-img"
+                             alt="Photo of Nafisa Tabassum">
+                    </div>
+
+                    <!-- For CSS particles to create the dissolving photo breaking effect -->
+                    <div class="photo-particles" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+
+                    <!-- Added a small AI robot character beside hero photo -->
+                    <div class="ai-bot" aria-hidden="true">
+                        <span class="bot-head">◉ ◉</span>
+                        <span class="bot-body">♥</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About section. Used Bootstrap for container, row, col, img-fluid -->
+    <section id="about" class="about-section section-space">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 text-center">
+                    <img src="assets/images/profilePhoto.jpeg" class="img-fluid about-img"
+                         alt="Image of Nafisa Tabassum">
+                </div>
+                <div class="col-lg-7">
+                    <article class="about-content">
+                        <h3>I'm Nafisa Tabassum</h3>
+                        <p>A Computer Science student driven by <span class="highlight-text">logic</span> and
+                            <span class="highlight-text">creativity.</span>
+                        </p>
+                        <p>
+                            My journey into technology started with curiosity. Growing up as a South Asian woman
+                            interested in STEM, I was always drawn to science fairs, small experiments, creative
+                            projects, and learning how things work. That curiosity slowly grew into a serious interest
+                            in programming, software development, and building things that can actually be useful.
+                        </p>
+                        <p>
+                            I enjoy working across different areas of technology,
+                            including <span class="highlight-text">web development</span>,
+                            <span class="highlight-text">object-oriented programming</span>,
+                            <span class="highlight-text">technical support</span>, and
+                            <span class="highlight-text">user-focused design</span>.
+                        </p>
+                        <p>
+                            What excites me most is the process of learning something new, applying it, and watching
+                            an idea turn into something real. Projects like my full-stack application, 8 Queens visual
+                            game, and Commvault prototype helped me practice persistence, problem-solving, teamwork,
+                            and creativity.
+                        </p>
+                        <p>
+                            Beyond technology, I love <span class="highlight-text">art</span>,
+                            <span class="highlight-text">design</span>,
+                            <span class="highlight-text">drawing</span>,
+                            <span class="highlight-text">music</span>,
+                            <span class="highlight-text">singing</span>, and
+                            <span class="highlight-text">playing instruments</span>. I believe creativity helps me
+                            approach
+                            technical problems in a more thoughtful and human-centered way.
+                        </p>
+                        <p>
+                            My goal is to grow as a software engineer and build solutions that are not only
+                            functional, but also <span class="highlight-text">useful, accessible, and meaningful</span>
+                            for the people who use them.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-space">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Skills</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Adding Skill Card1 using Bootstrap -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card skill-card h-100 shadow-sm">
+                        <div class="card-body"><i class="fa-solid fa-code card-icon" aria-hidden="true"></i>
+                            <h3 class="card-title">Programming</h3>
+                            <ul class="card-list">
+                                <li>C++</li>
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <!-- Adding Skill Card2 using Bootstrap -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card skill-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-laptop-code card-icon" aria-hidden="true"></i>
+                            <h3 class="card-title">Web Development</h3>
+                            <ul class="card-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bootstrap</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <!-- Adding Skill Card3 using Bootstrap -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card skill-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-database card-icon" aria-hidden="true"></i>
+                            <h3 class="card-title">Tools & Database</h3>
+                            <ul class="card-list">
+                                <li>Git & GitHub</li>
+                                <li>PostgreSQL</li>
+                                <li>Prisma</li>
+                                <li>Microsoft Office</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <!-- Adding Skill Card4 using Bootstrap -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card skill-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-people-group card-icon" aria-hidden="true"></i>
+                            <h3 class="card-title">Professional</h3>
+                            <ul class="card-list">
+                                <li>Documentation</li>
+                                <li>Collaboration</li>
+                                <li>Technical Support</li>
+                                <li>Problem Solving</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section section-space">
+        <div class="container px-4 px-lg-5">
+            <div class="section-header text-center">
+                <h2>Experience</h2>
+            </div>
+            <div class="row g-4 g-lg-5 justify-content-center">
+                <!-- Incoming Summer 2026 Experience -->
+                <div class="col-12 col-lg-10">
+                    <article class="card incoming-experience-card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-4">
+                                <div class="incoming-left d-flex align-items-center gap-3">
+                                    <div class="incoming-icon">
+                                        <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="badge incoming-badge">Incoming Summer Internship</span>
+                                </div>
+                                <div class="incoming-main">
+                                    <h3 class="card-title mb-2">CUNY Career Launch Intern</h3>
+                                    <a href="https://www.cuny.edu/about/administration/offices/ocip/students/careerlaunch/"
+                                       target="_blank" rel="noopener noreferrer" class="company-name">STEM Hub</a>
+                                    <p class="experience-date mb-2">July 2026 – August 2026</p>
+                                    <p class="card-text mb-0">
+                                        Upcoming summer internship where I will continue building
+                                        professional experience in a STEM-focused environment while applying my
+                                        technical,
+                                        communication, and problem-solving skills.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Experience Card 1 -->
+                <div class="col-12 col-lg-6">
+                    <article class="card experience-card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="experience-icon">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title content-title">Software Engineering Intern</h3>
+                            <a href="https://www.richinc.org/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Reach Into Cultural Heights, Inc. (RICH)
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <p class="experience-date">January 2026 – May 2026</p>
+                            <div class="content-tags">
+                                <span class="badge experience-badge">Web Development</span>
+                                <span class="badge experience-badge">Documentation</span>
+                                <span class="badge experience-badge">Teamwork</span>
+                            </div>
+                            <ul class="experience-list">
+                                <li>Worked on web development and digital support tasks for a community-focused
+                                    organization.
+                                </li>
+                                <li>Improved and optimized site making it 70% faster through debugging, content updates,
+                                    and usability enhancements.
+                                </li>
+                                <li>Built an internal documentation portal to improve and organize digital content,
+                                    website updates, and internal documentation.
+                                </li>
+                                <li>Managed site updates and deployments through GitHub for testing and Cyberduck for
+                                    production hosting.
+                                </li>
+                                <li>Collaborated with team members through weekly hybrid Agile meetings to share goals,
+                                    progress and updates.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="col-12 col-lg-6">
+                    <article class="card experience-card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="experience-icon">
+                                <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title content-title">CUNY Tech Support Intern</h3>
+                            <a href="https://infohub.nyced.org/in-our-schools/working-with-nycps/current-employees/diit-help-desk"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                NYC Department of Education (DIIT)
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <p class="experience-date">October 2025 – June 2026</p>
+                            <div class="content-tags">
+                                <span class="badge experience-badge">Tech Support</span>
+                                <span class="badge experience-badge">Troubleshooting</span>
+                                <span class="badge experience-badge">User Support</span>
+                            </div>
+                            <ul class="experience-list">
+                                <li>Supported staff and student technology needs in a real school environment.</li>
+                                <li>Helped troubleshoot device, software, access, and daily IT-related issues.</li>
+                                <li>Configured and secured student devices through Microsoft Intune/MDM, supporting
+                                    endpoint management, deploying software updates and enforcing DOE security
+                                    standards.
+                                </li>
+                                <li>Maintained device readiness, support records and technical documentation to assist
+                                    daily IT operations.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="col-12 col-lg-6">
+                    <article class="card experience-card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="experience-icon">
+                                <i class="fa-solid fa-pen-ruler" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title content-title">UX Design Sprintern</h3>
+                            <a href="https://www.commvault.com/about-us"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Commvault <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <p class="experience-date">January 2026</p>
+                            <div class="content-tags">
+                                <span class="badge experience-badge">UX Design</span>
+                                <span class="badge experience-badge">Prototype</span>
+                                <span class="badge experience-badge">User Flow</span>
+                            </div>
+                            <ul class="experience-list">
+                                <li>Worked with a team to study backend data dashboard pain points.</li>
+                                <li>Analyzed enterprise data protection workflows using heuristic evaluation, personas,
+                                    and competitive research to identify usability issues.
+                                </li>
+                                <li>Improved navigation, information hierarchy, and system feedback through usability
+                                    testing and iteration.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Experience Card 4 -->
+                <div class="col-12 col-lg-6">
+                    <article class="card experience-card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="experience-icon">
+                                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title content-title">Student Consultant</h3>
+                            <a href="https://buildfellowship.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                The Build Fellowship <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <p class="experience-date">July 2025 – August 2025</p>
+                            <div class="content-tags">
+                                <span class="badge experience-badge">Full Stack</span>
+                                <span class="badge experience-badge">Database</span>
+                                <span class="badge experience-badge">APIs</span>
+                            </div>
+                            <ul class="experience-list">
+                                <li>Collaborated in an industry-mentored fellowship program focused on full-stack
+                                    development and software project delivery.
+                                </li>
+                                <li>Worked with database-backed application concepts and project planning.</li>
+                                <li>Practiced collaboration, technical communication, and applying new tools quickly.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Experience Card 5 -->
+                <div class="col-12 col-lg-6">
+                    <article class="card experience-card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="experience-icon">
+                                <i class="fa-solid fa-notes-medical" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title content-title">Marketing Specialist Intern</h3>
+                            <a href="https://mdland.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                MDLand iClinic <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <p class="experience-date">July 2024 – August 2024</p>
+
+                            <div class="content-tags">
+                                <span class="badge experience-badge">Healthcare Tech</span>
+                                <span class="badge experience-badge">Communication</span>
+                                <span class="badge experience-badge">Outreach</span>
+                            </div>
+                            <ul class="experience-list">
+                                <li>Coordinated outreach to 500+ healthcare providers through targeted email
+                                    campaigns.
+                                </li>
+                                <li>Organized and maintained large datasets in Excel, improving data accessibility and
+                                    operational efficiency.
+                                </li>
+                                <li>Collaborated with the engineering team to test platform features across browsers,
+                                    improving frontend optimization & user workflow.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project Section -->
+    <section id="projects" class="projects-section section-space">
+        <div class="container px-4 px-lg-5">
+            <div class="section-title text-center">
+                <h2>Projects</h2>
+                <p class="section-intro">Click the project links to view the work.</p>
+
+                <!-- Update: Adding project filter component controlled by JavaScript -->
+                <div class="project-filters" aria-label="Project filters">
+                    <button class="filter-btn active" type="button" data-filter="all">All</button>
+                    <button class="filter-btn" type="button" data-filter="web">Web</button>
+                    <button class="filter-btn" type="button" data-filter="cpp">C++</button>
+                    <button class="filter-btn" type="button" data-filter="java">Java</button>
+                    <button class="filter-btn" type="button" data-filter="design">Design</button>
+                </div>
+            </div>
+            <div class="row g-4 g-lg-5">
+
+                <!-- Project Card 1 -->
+                <div class="col-12 col-lg-6 project-wrapper" data-category="web">
+                    <article class="card project-card h-100 shadow-sm">
+                        <img src="assets/projects/statewise.jpg"
+                             class="project-img"
+                             alt="Screenshot of StateWise USA project">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title content-title">StateWise USA</h3>
+                            <p class="card-text project-description">
+                                A basic full-stack application from The Build Fellowship that helps users explore U.S.
+                                state information with weather and outdoor activity features.
+                            </p>
+                            <div class="content-tags">
+                                <span class="badge tech-badge">HTML</span>
+                                <span class="badge tech-badge">CSS</span>
+                                <span class="badge tech-badge">JavaScript</span>
+                                <span class="badge tech-badge">PostgreSQL</span>
+                            </div>
+                            <div class="content-actions">
+                                <a href="https://github.com/T-nafisa/StateWise_USA"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-sm primary-btn">GitHub</a>
+
+                                <a href="https://state-wise-usa.vercel.app/"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-sm primary-btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="col-12 col-lg-6 project-wrapper" data-category="web cpp">
+                    <article class="card project-card h-100 shadow-sm">
+                        <img src="assets/projects/8QueensGame.png"
+                             class="project-img"
+                             alt="Screenshot of 8 Queens Visual Game project">
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title content-title">8 Queens Visual Game</h3>
+                            <p>
+                                A C++ 8 Queens puzzle project from CS211 later made visual using HTML, CSS,
+                                and JavaScript.
+                            </p>
+                            <div class="content-tags">
+                                <span class="badge tech-badge">C++</span>
+                                <span class="badge tech-badge">HTML</span>
+                                <span class="badge tech-badge">CSS</span>
+                                <span class="badge tech-badge">JavaScript</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/T-nafisa/CPP_Advanced-OOP-based-Projects/tree/main/8queens%20Problems/8Queens_Visual_Game"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-sm primary-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="col-12 col-lg-6 project-wrapper" data-category="design">
+                    <article class="card project-card h-100 shadow-sm">
+                        <img src="assets/projects/commvault.png"
+                             class="card-img-top project-img"
+                             alt="Screenshot of Commvault prototype project">
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title content-title">Commvault Prototype</h3>
+
+                            <p class="card-text project-description">
+                                A UX prototype created during my Commvault sprinternship. My team studied backend
+                                data dashboard pain points and proposed a clearer workflow for users with final
+                                prototypes and usability testing.
+                            </p>
+
+                            <div class="content-tags">
+                                <span class="badge tech-badge">UX Design</span>
+                                <span class="badge tech-badge">Wireframing & Prototype</span>
+                                <span class="badge tech-badge">Usability Testing</span>
+                            </div>
+
+                            <div class="content-actions">
+                                <a href="https://github.com/T-nafisa/Commvault_UX_Sprinternship_Backup-Admin-Redesign_Project/tree/main"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-sm primary-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="col-12 col-lg-6 project-wrapper" data-category="cpp">
+                    <article class="card project-card h-100 shadow-sm">
+                        <img src="assets/projects/c++_project.png"
+                             class="card-img-top project-img"
+                             alt="C++ project image">
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title content-title">C++ Advanced OOP-Algorithmic Projects</h3>
+
+                            <p class="card-text project-description">
+                                Worked on C++ object-oriented projects using dynamic programming, backtracking,
+                                advanced algorithms, OOP, and pointers.
+                            </p>
+
+                            <div class="content-tags">
+                                <span class="badge tech-badge">C++</span>
+                                <span class="badge tech-badge">Backtracking</span>
+                                <span class="badge tech-badge">Object-oriented Programming</span>
+                                <span class="badge tech-badge">Advanced Algorithm</span>
+                            </div>
+
+                            <div class="content-actions">
+                                <a href="https://github.com/T-nafisa/CPP_Advanced-OOP-based-Projects"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-sm primary-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="col-12 col-lg-6 project-wrapper" data-category="java">
+                    <article class="card project-card h-100 shadow-sm">
+                        <img src="assets/projects/java_project.png"
+                             class="card-img-top project-img"
+                             alt="Java project image">
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title content-title">Java OOP Projects</h3>
+
+                            <p class="card-text project-description">
+                                Worked on Java object-oriented programming projects and mini game projects focused
+                                on Java algorithms, logic, GUI, and Java Swing.
+                            </p>
+
+                            <div class="content-tags">
+                                <span class="badge tech-badge">Java</span>
+                                <span class="badge tech-badge">Object-oriented Programming</span>
+                                <span class="badge tech-badge">Java Swing</span>
+                                <span class="badge tech-badge">GUI</span>
+                            </div>
+
+                            <div class="content-actions">
+                                <a href="https://github.com/T-nafisa/Java-OOP-Projects/tree/main"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-sm primary-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="col-12 col-lg-6 project-wrapper" data-category="hardware">
+                    <article class="card project-card h-100 shadow-sm">
+                        <img src="assets/projects/logic-circuit.png"
+                             class="card-img-top project-img"
+                             alt="Logic circuit project image">
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title content-title">Logic Circuits</h3>
+
+                            <p class="card-text project-description">
+                                Simulated and designed digital logic circuits using Logisim, including basic logic
+                                gates and circuit design practice.
+                            </p>
+
+                            <div class="content-tags">
+                                <span class="badge tech-badge">Logic Gates</span>
+                                <span class="badge tech-badge">Circuit Design</span>
+                                <span class="badge tech-badge">Logisim</span>
+                            </div>
+
+                            <div class="content-actions">
+                                <a href="https://github.com/T-nafisa/digital-logic-design-logisim"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-sm primary-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Beyond Technology Section -->
+    <section id="beyond" class="beyond-section section-space">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Beyond Technology</h2>
+                <p class="section-intro">A small glimpse of the creative part of my life.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Beyond Tech Card  -->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <article class="card beyond-card h-100 shadow-sm">
+                        <img src="assets/drawings/art5.jpeg" class="beyond-img" alt="Artwork by Nafisa">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title">Art & Drawing</h3>
+                            <p class="card-text">
+                                Drawing and visual creativity help me express ideas and think beyond a purely
+                                technical perspective.
+                            </p>
+                            <div class="content-actions">
+                                <a href="art.html" class="btn btn-sm primary-btn">
+                                    View Artwork
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-space">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Contact Me</h2>
+            </div>
+            <!-- Update: added a two-column flex layout on contact section -->
+            <div class="contact-layout">
+                <aside class="contact-note">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    <h3>Send a message</h3>
+                    <p>
+                        If you're interested in collaborating, discussing opportunities, or learning more about my work,
+                        feel free to reach out using the form below.
+                    </p>
+                    <!-- Added bottom decorative contact block -->
+                    <div class="contact-note-extra">
+                        <div class="contact-mini-card">
+                            <div class="contact-mini-icon">
+                                <a href="mailto:nafisaadt@gmail.com" aria-label="Email Nafisa" >
+                                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-mini-text">
+                                <p class="contact-mini-title">Let’s connect!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="signal-line" aria-hidden="true"></div>
+                </aside>
+
+                <div class="contact-form-wrap">
+                    <!-- Using formsubmit.co to get the contact form messages in my email. It's a temporary setup until connect it with my backend -->
+                    <form id="contactForm" class="contact-form shadow-sm p-4"
+                          action="https://formsubmit.co/nafisaadt@gmail.com" method="post"  aria-label="Contact form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" autocomplete="name"
+                                   required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                   placeholder="Enter your email" autocomplete="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject"
+                                   placeholder="Enter a subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5"
+                                      placeholder="Write your message" required></textarea>
+                        </div>
+                        <button type="submit" class="button"> Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="container text-center">
+        <p class="footer-built">Designed by Nafisa Tabassum. Hosted on <span>GitHub Pages</span>.</p>
+        <p class="footer-copy"> &copy; All rights reserved.</p>
+    </div>
+</footer>
+
+
+<!-- Linking Bootstrap JS for navbar's toggling used from it -->
+<button id="backToTop" class="btn back-to-top" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+<!-- Adding Bootstrap JS needed for mobile navbar collapse -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Linking my custom JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>

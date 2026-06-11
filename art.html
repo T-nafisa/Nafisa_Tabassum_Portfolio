@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Nafisa Tabassum</title>
+
+    <!-- ADDED: website favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon/logo.png">
+    <link rel="apple-touch-icon" href="assets/favicon/logo.png">
+    <link rel="shortcut icon" href="assets/favicon/logo.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Adding playful elements for background decorations -->
+<div class="playful-bg" aria-hidden="true">
+    <span class="bg-star star-one">✦</span>
+    <span class="bg-star star-two">✧</span>
+    <span class="bg-star star-three">✦</span>
+    <span class="bg-code code-one">&lt;/&gt;</span>
+    <span class="bg-code code-two">./</span>
+    <span class="bg-code code-three">{ }</span>
+    <span class="bg-planet planet-one"></span>
+    <span class="bg-planet planet-two"></span>
+    <span class="pacman"></span>
+    <span class="pellets"></span>
+    <span class="pixel-ghost">▟▙</span>
+    <span class="shooting-star"></span>
+</div>
+
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar" aria-label="Art gallery navigation">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Nafisa Tabassum</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#beyond">Beyond Tech</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link back-link" href="index.html#beyond">
+                            <i class="fa-solid fa-arrow-left"></i> Back
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-controls">
+                <!-- Adding small screen back button for responsiveness -->
+                <a href="index.html#beyond" class="mobile-back-link" aria-label="Back to Beyond Tech section">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    <span>Back</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- theme toggle button. Updated: to sleepy/wake-up character theme toggle -->
+                <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Switch Theme">
+                    <span class="toggle-sky" aria-hidden="true"></span>
+                    <span class="toggle-moon" aria-hidden="true"></span>
+                    <span class="toggle-sun" aria-hidden="true"></span>
+                    <span class="toggle-character" aria-hidden="true">
+                        <span class="toggle-face"></span>
+                    </span>
+                    <span class="toggle-z" aria-hidden="true">zZ</span>
+                    <span class="visually-hidden">Switch theme</span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+<main>
+    <section class="art-gallery-section section-space">
+        <div class="container">
+            <div class="art-gallery-header">
+                <h1> Art gallery</h1>
+                <p>
+                    A collection of my artwork, exploring different styles and ideas.
+                </p>
+            </div>
+            <div class="art-gallery">
+                <div class="art-item">
+                    <img src="assets/drawings/drawing1.jpeg" alt="Drawing by Nafisa">
+                </div>
+
+                <div class="art-item">
+                    <img src="assets/drawings/drawing2.jpeg" alt="Sketch by Nafisa">
+                </div>
+
+                <div class="art-item">
+                    <img src="assets/drawings/drawing3.jpeg" alt="Creative artwork by Nafisa">
+                </div>
+
+                <div class="art-item">
+                    <img src="assets/drawings/drawing4.jpeg" alt="Traditional drawing by Nafisa">
+                </div>
+
+                <div class="art-item center-art">
+                    <img src="assets/drawings/art6.jpeg" alt="Artwork by Nafisa">
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container text-center">
+        <p class="footer-built">Designed by Nafisa Tabassum. Hosted on <span>GitHub Pages</span>.</p>
+        <p class="footer-copy">&copy; All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Added Back-to-top button reused from the main page -->
+<button id="backToTop" class="btn back-to-top" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
